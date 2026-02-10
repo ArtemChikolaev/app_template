@@ -2,7 +2,8 @@
 sealed class Failure {
   const Failure(this.message);
 
-  /// Human‑readable description of the error.
+  /// Localization key for the error (e.g. [ErrorKeys.network]).
+  /// Use in UI as `failure.message.tr()` to show translated text.
   final String message;
 }
 

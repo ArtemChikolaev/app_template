@@ -1,5 +1,5 @@
-import 'package:app_template/core/router/app_router.dart';
-import 'package:app_template/core/theme/app_theme.dart';
+import 'package:app_template/app/router/app_router.dart';
+import 'package:app_template/app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 

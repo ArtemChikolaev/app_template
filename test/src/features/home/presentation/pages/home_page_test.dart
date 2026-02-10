@@ -1,5 +1,5 @@
+import 'package:app_template/app/di/service_locator.dart';
 import 'package:app_template/core/api/api_client.dart';
-import 'package:app_template/core/di/service_locator.dart';
 import 'package:app_template/core/generated/localizations/codegen_loader.g.dart';
 import 'package:app_template/src/features/home/data/repository/home_repository_impl.dart';
 import 'package:app_template/src/features/home/domain/repository/home_repository.dart';

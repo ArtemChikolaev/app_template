@@ -1,8 +1,8 @@
-import 'package:app_template/core/di/service_locator.dart';
+import 'package:app_template/app/di/service_locator.dart';
+import 'package:app_template/app/router/app_router.dart';
+import 'package:app_template/app/theme/text_theme.dart';
 import 'package:app_template/core/generated/assets/assets.gen.dart';
 import 'package:app_template/core/generated/localizations/locale_keys.g.dart';
-import 'package:app_template/core/router/app_router.dart';
-import 'package:app_template/core/theme/text_theme.dart';
 import 'package:app_template/src/features/home/presentation/bloc/home_page_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +76,7 @@ class _HomePageView extends StatelessWidget {
                         const SizedBox(height: 20),
                       ] else if (state.errorMessage != null) ...[
                         Text(
-                          state.errorMessage!,
+                          state.errorMessage!.tr(),
                           style: AppFonts.b4s22regularInter.copyWith(
                             color: Theme.of(context).colorScheme.error,
                           ),

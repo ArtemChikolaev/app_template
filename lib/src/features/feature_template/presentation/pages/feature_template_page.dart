@@ -1,5 +1,5 @@
+import 'package:app_template/app/theme/text_theme.dart';
 import 'package:app_template/core/generated/localizations/locale_keys.g.dart';
-import 'package:app_template/core/theme/text_theme.dart';
 import 'package:app_template/src/features/feature_template/presentation/bloc/feature_template_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

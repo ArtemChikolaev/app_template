@@ -1,3 +1,4 @@
+import 'package:app_template/core/errors/dio_error_mapper.dart';
 import 'package:app_template/core/errors/failure.dart';
 import 'package:app_template/core/result/result.dart';
 import 'package:app_template/src/features/home/domain/entity/home_entity.dart';
@@ -51,7 +52,7 @@ void main() {
     test(
       'emits loading then error state when use case returns failure',
       () async {
-        const Failure failure = NetworkFailure('Network error');
+        const Failure failure = NetworkFailure(ErrorKeys.network);
 
         when(() => getHomeDataUseCase()).thenAnswer(
           (_) async => const Result<HomeEntity>.failure(failure),

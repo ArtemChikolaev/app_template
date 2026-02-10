@@ -1,3 +1,4 @@
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +15,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   HomePageBloc({required GetHomeDataUseCase getHomeDataUseCase})
     : _getHomeDataUseCase = getHomeDataUseCase,
       super(const HomePageState.initial()) {
-    on<HomePageInitialEvent>(_onInitial);
+    on<HomePageInitialEvent>(_onInitial, transformer: restartable());
   }
 
   final GetHomeDataUseCase _getHomeDataUseCase;

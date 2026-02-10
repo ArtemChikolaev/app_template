@@ -10,5 +10,11 @@ abstract class  LocaleKeys {
   static const feature_template_page_description = 'feature_template_page_description';
   static const home_from_repository = 'home_from_repository';
   static const this_text_comes_from_the_domain_data_layers = 'this_text_comes_from_the_domain_data_layers';
+  static const errors_network = 'errors_network';
+  static const errors_server = 'errors_server';
+  static const errors_client = 'errors_client';
+  static const errors_timeout = 'errors_timeout';
+  static const errors_cancelled = 'errors_cancelled';
+  static const errors_unknown = 'errors_unknown';
 
 }

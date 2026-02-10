@@ -1,9 +1,14 @@
 {
-    "app_name": "Шаблон приложения",
-    "home_page_title": "Главная страница",
-    "hello_world": "Добро пожаловать в шаблон приложения!",
-    "feature_template_page_title": "Шаблон страницы",
-    "feature_template_page_description": "Это страница шаблона",
-    "home_from_repository": "Главная страница из репозитория",
-    "this_text_comes_from_the_domain_data_layers": "Этот текст приходит из слоев домена/данных."
-}
+    "app_name":"Шаблон приложения",
+    "home_page_title":"Главная страница",
+    "hello_world":"Добро пожаловать в шаблон приложения!",
+    "feature_template_page_title":"Шаблон страницы",
+    "feature_template_page_description":"Это страница шаблона",
+    "home_from_repository":"Главная страница из репозитория",
+    "this_text_comes_from_the_domain_data_layers":"Этот текст приходит из слоев домена/данных.",
+    "errors_network":"Ошибка сети. Проверьте подключение к интернету.",
+    "errors_server":"Ошибка сервера. Попробуйте позже.",
+    "errors_client":"Запрос не может быть выполнен. Проверьте введённые данные.",
+    "errors_timeout":"Превышено время ожидания. Попробуйте снова.",
+    "errors_cancelled":"Запрос отменён.",
+    "errors_unknown":"Что-то пошло не так. Попробуйте снова."}

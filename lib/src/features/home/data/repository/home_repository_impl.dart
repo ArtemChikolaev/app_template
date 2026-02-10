@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:app_template/core/api/api_client.dart';
+import 'package:app_template/core/errors/dio_error_mapper.dart';
 import 'package:app_template/core/errors/failure.dart';
 import 'package:app_template/core/logger/app_logger.dart';
 import 'package:app_template/core/result/result.dart';
@@ -20,7 +21,6 @@ class HomeRepositoryImpl implements HomeRepository {
     AppLogger.debug('HomeRepositoryImpl.getHomeData started');
 
     try {
-      // Example: fetch a fake post from dummyjson
       final response = await _apiClient.get<dynamic>('/posts/1');
 
       final Map<String, dynamic> data = switch (response.data) {
@@ -38,24 +38,7 @@ class HomeRepositoryImpl implements HomeRepository {
       AppLogger.info('HomeRepositoryImpl.getHomeData success');
       return Result<HomeEntity>.success(entity);
     } on DioException catch (error) {
-      final int? statusCode = error.response?.statusCode;
-      final String failureMessage;
-
-      if (statusCode != null && statusCode >= 500 && statusCode < 600) {
-        failureMessage =
-            'Server is currently unavailable. Please try again later.';
-      } else if (statusCode != null && statusCode >= 400 && statusCode < 500) {
-        failureMessage =
-            'Request cannot be completed. Please check your input or try again.';
-      } else {
-        failureMessage =
-            'Network error occurred. Please check your connection.';
-      }
-
-      final Failure failure = statusCode == null
-          ? NetworkFailure(failureMessage)
-          : ServerFailure('$failureMessage (code: $statusCode)');
-
+      final Failure failure = mapDioException(error);
       AppLogger.warning(
         'HomeRepositoryImpl.getHomeData failed: ${failure.message}',
         error,
@@ -68,7 +51,7 @@ class HomeRepositoryImpl implements HomeRepository {
         stackTrace,
       );
       return Result<HomeEntity>.failure(
-        const UnknownFailure('Unexpected error occurred. Please try again.'),
+        const UnknownFailure(ErrorKeys.unknown),
       );
     }
   }

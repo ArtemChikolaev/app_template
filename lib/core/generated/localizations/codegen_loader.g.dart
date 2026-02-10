@@ -21,7 +21,13 @@ class CodegenLoader extends AssetLoader{
   "feature_template_page_title": "Шаблон страницы",
   "feature_template_page_description": "Это страница шаблона",
   "home_from_repository": "Главная страница из репозитория",
-  "this_text_comes_from_the_domain_data_layers": "Этот текст приходит из слоев домена/данных."
+  "this_text_comes_from_the_domain_data_layers": "Этот текст приходит из слоев домена/данных.",
+  "errors_network": "Ошибка сети. Проверьте подключение к интернету.",
+  "errors_server": "Ошибка сервера. Попробуйте позже.",
+  "errors_client": "Запрос не может быть выполнен. Проверьте введённые данные.",
+  "errors_timeout": "Превышено время ожидания. Попробуйте снова.",
+  "errors_cancelled": "Запрос отменён.",
+  "errors_unknown": "Что-то пошло не так. Попробуйте снова."
 };
 static const Map<String,dynamic> _en = {
   "app_name": "App Template",
@@ -30,7 +36,13 @@ static const Map<String,dynamic> _en = {
   "feature_template_page_title": "Feature Template Page",
   "feature_template_page_description": "This is the feature template page",
   "home_from_repository": "Home from repository",
-  "this_text_comes_from_the_domain_data_layers": "This text comes from the domain/data layers."
+  "this_text_comes_from_the_domain_data_layers": "This text comes from the domain/data layers.",
+  "errors_network": "Network error. Please check your connection.",
+  "errors_server": "Server error. Please try again later.",
+  "errors_client": "Request cannot be completed. Please check your input.",
+  "errors_timeout": "Request timed out. Please try again.",
+  "errors_cancelled": "Request was cancelled.",
+  "errors_unknown": "Something went wrong. Please try again."
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ru": _ru, "en": _en};
 }

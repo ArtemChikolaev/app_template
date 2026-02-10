@@ -14,11 +14,7 @@ Future<void> setupServiceLocator(SharedPreferences sharedPreferences) async {
   sl
     ..registerSingleton<SharedPreferences>(sharedPreferences)
     ..registerLazySingleton<ApiClient>(
-      () => ApiClient(
-        // Example mock base URL; replace with your real one per environment.
-        // Используем dummyjson, который отдаёт тестовые данные без авторизации.
-        baseUrl: 'https://dummyjson.com',
-      ),
+      () => ApiClient(baseUrl: 'https://dummyjson.com'),
     );
 
   // Home feature
