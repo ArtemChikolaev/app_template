@@ -1,11 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:app_template/src/features/home/presentation/pages/home_page.dart';
+import 'package:app_template/src/features/feature_template/presentation/pages/feature_template_page.dart';
 import 'package:go_router/go_router.dart';
 
-class AppRouter {
-  AppRouter();
+abstract final class AppRouter {
+  AppRouter._();
 
-  static final GoRouter _router = GoRouter(
+  static final GoRouter router = GoRouter(
     initialLocation: MobilePages.homePage.path,
     routes: [
       GoRoute(
@@ -13,13 +14,18 @@ class AppRouter {
         name: MobilePages.homePage.name,
         builder: (context, state) => const HomePage(),
       ),
+      GoRoute(
+        path: MobilePages.featureTemplatePage.path,
+        name: MobilePages.featureTemplatePage.name,
+        builder: (context, state) => const FeatureTemplatePage(),
+      ),
     ],
   );
-  GoRouter get router => _router;
 }
 
 enum MobilePages {
-  homePage;
+  homePage,
+  featureTemplatePage;
 
   static MobilePages? fromName(String? name) {
     return MobilePages.values.firstWhereOrNull(

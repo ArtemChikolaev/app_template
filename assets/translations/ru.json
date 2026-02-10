@@ -1,5 +1,9 @@
 {
     "app_name": "Шаблон приложения",
     "home_page_title": "Главная страница",
-    "hello_world": "Добро пожаловать в шаблон приложения!"
+    "hello_world": "Добро пожаловать в шаблон приложения!",
+    "feature_template_page_title": "Шаблон страницы",
+    "feature_template_page_description": "Это страница шаблона",
+    "home_from_repository": "Главная страница из репозитория",
+    "this_text_comes_from_the_domain_data_layers": "Этот текст приходит из слоев домена/данных."
 }

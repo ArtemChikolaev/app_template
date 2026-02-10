@@ -15,7 +15,7 @@ class AppEntryPoint extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      routerConfig: AppRouter().router,
+      routerConfig: AppRouter.router,
     );
   }
 }

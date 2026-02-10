@@ -1,5 +1,9 @@
 {
     "app_name": "App Template",
     "home_page_title": "Home Page",
-    "hello_world": "Welcome to the app template!"
+    "hello_world": "Welcome to the app template!",
+    "feature_template_page_title": "Feature Template Page",
+    "feature_template_page_description": "This is the feature template page",
+    "home_from_repository": "Home from repository",
+    "this_text_comes_from_the_domain_data_layers": "This text comes from the domain/data layers."
 }
